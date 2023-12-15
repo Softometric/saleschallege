@@ -19,9 +19,7 @@ namespace Infrastructure.Persistence.Configurations
             builder.Property(p => p.Discount).HasMaxLength(20);
             builder.Property(p => p.Quantity).HasMaxLength(20);
             builder.Property(p => p.UnitPrice).HasMaxLength(20);
-            builder.Property(c => c.Status).HasMaxLength(50).HasConversion(new EnumToStringConverter<OrderStatus>());
-
-            
+            builder.Property(c => c.Status).HasMaxLength(50).HasConversion(new EnumToStringConverter<OrderStatus>()
         }
     }
 }
