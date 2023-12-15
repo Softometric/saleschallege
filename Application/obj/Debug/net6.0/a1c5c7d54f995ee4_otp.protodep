@@ -1,0 +1,2 @@
+obj\Debug\net6.0\Common\Protos/Otp.cs \
+obj\Debug\net6.0\Common\Protos/OtpGrpc.cs: Common/Protos/otp.proto

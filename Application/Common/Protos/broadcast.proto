@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+option csharp_namespace = "NotificationBrokerClient";
+
+package broadcast;
+
+// The greeting service definition.
+service Notify {
+  // Sends a greeting
+  rpc SendNotificationSms (SmsRequest) returns (SmsResponse);
+    rpc SendNotificationEmail (SendMailReq) returns (MailResponse);
+
+}
+
+// The request message containing the user's name.
+message SmsRequest {
+  string recipient = 1;
+  string message= 2;
+}
+
+// The response message containing the greetings.
+message SmsResponse {
+  string responseMessage = 1;
+  bool succeded=2;
+}
+message Manifest {
+    string key=1;
+    string value=2;
+}
+message SendMailReq{
+      string appCode=1;
+    string recipient=2;
+    string title=3;
+    repeated Manifest placeHolder=4;
+}
+message MailResponse {
+     bool isSuccessful=1;
+    string message=2;
+}

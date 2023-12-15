@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+option csharp_namespace = "OtpService.Protos";
+package otp;
+
+
+service OtpProcessor {
+  // Sends a greeting
+  rpc GeneratOtp (CreateOtpRequest) returns (OtpResponse);
+  rpc ValidateOtp (ValidateOtpReq) returns (ValidationResponse);
+}
+
+// The request message containing the user's name.
+message CreateOtpRequest {
+  string UserRerence = 1;
+  bool IsString=2;
+}
+message OtpResponse {
+  string OtpValue = 1;
+  string UserRetrievalCode=2;
+}
+message ValidateOtpReq {
+  string UserRetrievalCode = 1;
+  string Otp = 2;
+}
+message ValidationResponse {
+  bool isSuccessful = 1;
+  string message = 2;
+}

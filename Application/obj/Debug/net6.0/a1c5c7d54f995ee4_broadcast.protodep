@@ -1,0 +1,2 @@
+obj\Debug\net6.0\Common\Protos/Broadcast.cs \
+obj\Debug\net6.0\Common\Protos/BroadcastGrpc.cs: Common/Protos/broadcast.proto
