@@ -19,5 +19,10 @@ namespace Application.Common.Enums
         Female,
         Others
     }
-
+    public enum SalesStatusEnum
+    {
+        Initiated,
+        Processed,
+        Shipped
+    }
 }

@@ -34,8 +34,4 @@
       <Compile Remove="Common\Helpers\StateHelper.cs" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="UseCases\" />
-    </ItemGroup>
-
 </Project>

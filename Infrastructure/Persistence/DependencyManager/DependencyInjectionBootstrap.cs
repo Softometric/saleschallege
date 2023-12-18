@@ -26,6 +26,7 @@ namespace Infrastructure.Persistence.DependencyManager
             services.AddTransient<IUnitOfWork, UoW>();
             services.AddTransient<IProductRepository, ProductRepository>();
             services.AddTransient<IInventoryRepository, InventoryRepository>();
+            services.AddTransient<ISalesOrderRepository, SalesOrderRepository>();
             services.AddTransient<ICustomerRepository, CustomerRepository>();
             services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
           //  services.AddTransient<IDateTime, DateTimeService>();

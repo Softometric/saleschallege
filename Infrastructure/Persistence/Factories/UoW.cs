@@ -6,12 +6,13 @@ namespace Infrastructure.Persistence.Factories
     {
         private readonly SalesDbContext _context;
         public UoW(SalesDbContext context, IProductRepository productStore, IInventoryRepository inventoryStore, 
-                  ICustomerRepository customerStore)
+                  ICustomerRepository customerStore, ISalesOrderRepository salesOrderStore)
         {
             _context = context;
             ProductStore = productStore;
             InventoryStore = inventoryStore;
             CustomerStore = customerStore;
+            SalesOrderStore = salesOrderStore;
         }
 
         private bool _disposed;
@@ -21,6 +22,7 @@ namespace Infrastructure.Persistence.Factories
         public IInventoryRepository InventoryStore { get; }
 
         public ICustomerRepository CustomerStore { get; }
+        public ISalesOrderRepository SalesOrderStore { get; }
 
         public async Task Commit()
         {
